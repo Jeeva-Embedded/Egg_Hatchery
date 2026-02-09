@@ -113,23 +113,32 @@ Data is stored in:
 
 Header:
 ReadingID,Date,Time,BME_Temp,BME_Hum,DHT_Temp,DHT_Hum,Position,RPM,Voltage,Current
+
 Example entry:
 12,9-2-2026,14:32,78.5F,45%,79.1F,43%,F,1200,230V,1.2A
 
 LCD Display Cycle
 The LCD rotates through screens:
+
 Screen 1
 Date & Time
+
 Screen 2
 BME Temp | Hum
 DHT Temp | Hum
+
 Screen 3
 Voltage | Current
 Position | RPM
+
 RPM Measurement
+
 RPM is calculated using hardware interrupts:
+
 RPM = pulses_per_second × 60
+
 Timer updates every 1 second.
+
 This provides accurate real-time rotational speed.
 System Workflow
 1. Read RTC timestamp
